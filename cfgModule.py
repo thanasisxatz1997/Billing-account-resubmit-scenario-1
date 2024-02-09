@@ -18,14 +18,14 @@ def CurrentDateTime():
 
 def ConnectToOtemigDb(password):
     oracledb.init_oracle_client(lib_dir=r"C:\oracle\instantclient_21_12")
-    con = oracledb.connect(user='otemig', password=password, dsn="siebelvipscan.ote.gr:1521/otesblp_rw")
+    con = oracledb.connect(user='', password=password, dsn="")
     cursor = con.cursor()
     return cursor, con
 
 
 def ConnectToOsmDb(password):
     oracledb.init_oracle_client(lib_dir=r"C:\oracle\instantclient_21_12")
-    con = oracledb.connect(user='OSM', password=password, dsn='10.53.166.42:1521/OTEOSMP_SERVICE')
+    con = oracledb.connect(user='', password=password, dsn='')
     cursor = con.cursor()
     return cursor, con
 
