@@ -47,7 +47,7 @@ def GetNumsFromOsmData(dataList):
 
 
 def RunOteMigProcedure(cursor, connection, refNum):
-    query = f"BEGIN AS_F_RESUBMIT_ΒΑ('{refNum}'); COMMIT; END;"
+    query = f"BEGIN ...('{refNum}'); COMMIT; END;"
     cursor.execute(query)
     connection.commit()
 
